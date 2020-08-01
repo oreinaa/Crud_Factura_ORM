@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{cliente}}</title>
+</head>
+<body>
+    <ul>
+        <li><a href="/"> {{ Menu }}</a></li>
+        <li><a href="/producto">{{ producto }} </a></li>
+        <li><a href="/cliente">{{ cliente }} </a></li>
+    </ul>
+    <h1>{{cliente}} </h1>
+     <form action="" method="POST">
+         {% csrf_token %}  'Protege al formulario'
+         {{ form.as_p }}    'Formulario en forma de parrafo'
+         <button type="submit"> Crear </button>
+     </form>
+    <li><a href="/admin/app/cliente"> Consultar {{cliente}} </a></li>
+</body>
+</html>
